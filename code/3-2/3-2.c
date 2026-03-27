@@ -2,7 +2,15 @@
 
 void swap_endian(int* x) {
     char *p = (char*)x;
+    char temp;
 
+    temp = p[0];
+    p[0] = p[3];
+    p[3] = temp;
+
+    temp = p[1];
+    p[1] = p[2];
+    p[2] = temp;
     
 }
 
